@@ -1,7 +1,6 @@
 import {FaUser, FaLock} from 'react-icons/fa'
 import { useState } from "react";
-
-import "./Login.css"
+import "./Login.css";
 
 const Login = () => {
     const [username, setUsername] = useState("");
@@ -9,7 +8,7 @@ const Login = () => {
 
     const handleLogin = () => {
         if (username === "admin" && password === "1234") {
-        Alert("Bem Vindo");
+        alert("Bem Vindo");
         } else {
         alert("Credenciais inválidas!");
         }
@@ -20,11 +19,11 @@ const Login = () => {
         <h1>Acesse o Sistema</h1>
         <form onSubmit = {handleLogin}>
             <div>
-                <input type="name" placeholder='Login' required />
+                <input type="name" placeholder='Login' required onChange = {(e) => setUsername(e.target.value)}/>
                 <FaUser className='icon'/>
             </div>
             <div>
-                <input type="password" placeholder='Senha'required />
+                <input type="password" placeholder='Senha'required onChange = {(e) => setPassword(e.target.value)}/>
                 <FaLock className='icon'/>
             </div>
 
