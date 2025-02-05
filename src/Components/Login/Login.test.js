@@ -1,22 +1,17 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
-import Login from '../Login';
+import Login from '../Login/Login.jsx'; 
 
-// Mock do useNavigate
-const mockNavigate = jest.fn();
-
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
-    useNavigate: () => mockNavigate,
+const mockUseNavigate = jest.fn();
+jest.mock("react-router-dom", () => ({
+    ...jest.requireActual("react-router-dom"),
+    useNavigate: () => mockUseNavigate,
 }));
 
 describe('Login Component', () => {
     beforeEach(() => {
         render(
-            <MemoryRouter>
                 <Login />
-            </MemoryRouter>
         );
     });
 
@@ -31,6 +26,7 @@ describe('Login Component', () => {
         fireEvent.change(screen.getByPlaceholderText(/Senha/i), { target: { value: '1234' } });
         fireEvent.click(screen.getByText(/Acessar/i));
 
+        expect(window.location.href).toBe('/bem-vindo');
         expect(mockNavigate).toHaveBeenCalledWith('/bem-vindo');
     });
 
@@ -45,3 +41,5 @@ describe('Login Component', () => {
         expect(window.alert).toHaveBeenCalledWith('Credenciais inválidas!');
     });
 });
+
+export default {};

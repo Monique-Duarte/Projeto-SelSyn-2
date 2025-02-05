@@ -1,15 +1,25 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    /*background-color: #1e3799;*/
+}
+
 .container {
+    background-color: #fff;
     width: 450px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid #4a69bd;
+    /*2px solid rgba(255, 255, 255, 0.2);*/
     padding: 40px;
-    border-radius: 10px;
-    align-items: center;
-    justify-content: center;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .container h1 {
-    color: #fff;
+    color: #0c2461;
     text-align: center;
     font-size: 30px;
 }
@@ -26,12 +36,12 @@
     height: 100%;
     border: 2px solid rgba(255, 255, 255, 0.2);
     font-size: 16px;
-    color: #fff;
+    color: #0c2461;
     padding: 20px 25px;
 }
 
 .input-field input::placeholder {
-    color: #fff;
+    color: #0c2461;
 }
 
 .input-field .icon {
@@ -40,7 +50,7 @@
     top: 50%;
     transform: translateY(-50%);
     font-size: 16px;
-    color: #fff;
+    color: #0c2461;
 }
 
 .container .recall-forget {
@@ -51,12 +61,11 @@
 }
 
 .recall-forget label {
-    color: #fff;
-    font-weight: bold;
+    color: #0c2461;
 }
 
 .recall-forget a {
-    color: #fff;
+    color: #0c2461;
     text-decoration: none;
 }
 
@@ -67,8 +76,8 @@
 .container button {
     width: 100%;
     height: 50px;
-    color: #fff;
-    background-color: #192a56;
+    color: #0c2461;
+    background-color: #fff;
     outline: none;
     cursor: pointer;
     font-size: 16px;
