@@ -1,8 +1,21 @@
-# React + Vite
+# React + Vite + Jest
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# front-end
 
-Currently, two official plugins are available:
+Clone o projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+git clone 'https://github.com/Monique-Duarte/Projeto-SelSyn-2.git'
+
+Execute o comando 'npm i' para baixar as dependências
+
+baixe-o usando 'npm install --global'
+
+Rode o projeto com 'npm run dev'
+
+Crie sua conta e teste a criação de tarefas
+
+Lembre-se de que para ter acesso a página de boas vindas o usuário deve ser "admin" e a senha deve ser "1234".
+
+Caso o usuário ou senha estejam incorretos, você receberá uma menssagem com "credenciais incorretas".
+
+para realizar os test só rodar o comando 'npm test'.
