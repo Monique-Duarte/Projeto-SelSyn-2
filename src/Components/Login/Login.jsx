@@ -1,7 +1,6 @@
 import { FaUser, FaLock } from "react-icons/fa";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 import "./Login.css";
 
 const Login = () => {
@@ -22,7 +21,7 @@ const Login = () => {
             <form onSubmit={handleLogin}>
             <h1>Acesse o Sistema</h1>
                 <div className="input-field">
-                    <input type="name" placeholder="Login" required onChange={(e) => setUsername(e.target.value)} /> <FaUser className="icon"/> 
+                    <input type="text" placeholder="Login" required onChange={(e) => setUsername(e.target.value)} /> <FaUser className="icon"/> 
                 </div>
                 <div className="input-field">
                     <input type="password" placeholder="Senha" required onChange={(e) => setPassword(e.target.value)} /> <FaLock className="icon"/>
