@@ -1,3 +1,5 @@
+import "./Welcome.css";
+
 export default function Welcome() {
-    return <div>Welcome</div>;
+    return <div className="container">Welcome</div>;
 }
