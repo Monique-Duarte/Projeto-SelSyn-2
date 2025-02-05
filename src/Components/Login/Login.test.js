@@ -1,18 +1,17 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import Login from '../Login/Login.jsx'; 
+import '@testing-library/jest-dom';
 
-const mockUseNavigate = jest.fn();
-jest.mock("react-router-dom", () => ({
-    ...jest.requireActual("react-router-dom"),
-    useNavigate: () => mockUseNavigate,
+const mockNavigate = jest.fn();
+
+jest.mock('react-router-dom', () => ({
+    useNavigate: () => mockNavigate,
 }));
 
 describe('Login Component', () => {
     beforeEach(() => {
-        render(
-                <Login />
-        );
+        render(<Login />);
     });
 
     test('renders login form', () => {
@@ -26,12 +25,10 @@ describe('Login Component', () => {
         fireEvent.change(screen.getByPlaceholderText(/Senha/i), { target: { value: '1234' } });
         fireEvent.click(screen.getByText(/Acessar/i));
 
-        expect(window.location.href).toBe('/bem-vindo');
         expect(mockNavigate).toHaveBeenCalledWith('/bem-vindo');
     });
 
     test('shows alert for invalid credentials', () => {
-        // Mocks o alert
         window.alert = jest.fn();
 
         fireEvent.change(screen.getByPlaceholderText(/Login/i), { target: { value: 'user' } });
@@ -41,5 +38,3 @@ describe('Login Component', () => {
         expect(window.alert).toHaveBeenCalledWith('Credenciais inválidas!');
     });
 });
-
-export default {};
