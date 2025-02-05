@@ -8,8 +8,7 @@
 .container {
     background-color: #fff;
     width: 450px;
-    border: 2px solid #4a69bd;
-    /*2px solid rgba(255, 255, 255, 0.2);*/
+    border: 2px solid #0c2461;
     padding: 40px;
     border-radius: 20px;
     position: absolute;
@@ -34,7 +33,7 @@
 .input-field input {
     width: 100%;
     height: 100%;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid #0c2461;
     font-size: 16px;
     color: #0c2461;
     padding: 20px 25px;
@@ -78,6 +77,7 @@
     height: 50px;
     color: #0c2461;
     background-color: #fff;
+    border: 2px solid #0c2461;
     outline: none;
     cursor: pointer;
     font-size: 16px;
